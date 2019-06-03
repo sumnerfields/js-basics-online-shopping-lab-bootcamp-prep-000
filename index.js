@@ -10,15 +10,23 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
-}
+item = {itemName: toString(item), itemPrice: Math.floor((Math.random() * 100) + 1)};
+cart.push(item)
+  return item[Object.keys(item)[0]] + " has been added to your cart."}
 
 function viewCart() {
-  // write your code here
+if (cart.length === 0) {response = "Your shopping cart is empty."}
+else (for (i = 0; i < cart.length; i++)
+{}
 }
 
 function total() {
-  // write your code here
+  var prices = [];
+cart.forEach(function(obj){
+    prices.push(obj.itemPrice);
+})
+totalPrice = prices.reduce(accumulator, 0);
+return totalPrice
 }
 
 function removeFromCart(item) {
